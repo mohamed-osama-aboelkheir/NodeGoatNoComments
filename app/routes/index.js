@@ -6,6 +6,7 @@ const AllocationsHandler = require("./allocations");
 const MemosHandler = require("./memos");
 const ResearchHandler = require("./research");
 const tutorialRouter = require("./tutorial");
+const myRouterHandler = require("./my_router");
 const ErrorHandler = require("./error").errorHandler;
 
 const index = (app, db) => {
@@ -77,6 +78,9 @@ const index = (app, db) => {
 
     // Mount tutorial router
     app.use("/tutorial", tutorialRouter);
+
+    // test route
+    app.use("/my_route", myRouterHandler);
 
     // Error handling middleware
     app.use(ErrorHandler);
