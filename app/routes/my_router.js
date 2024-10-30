@@ -1,5 +1,13 @@
 function myRouterHandler(req, res) {
-  res.send('Hello World');
+    "use strict";
+  
+  const url = req.query.url;
+    if (url) {
+        res.redirect(url);
+    } 
+    else {
+        res.send('Hello World');
+    }
 }
 
 module.exports = myRouterHandler;
