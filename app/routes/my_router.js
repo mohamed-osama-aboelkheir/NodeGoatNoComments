@@ -3,7 +3,7 @@ function myRouterHandler(req, res) {
 
   const url = req.query.url;
     if (url) {
-        res.redirect(url);
+        res.redirect("https://www.google.com");
     } 
     else {
         res.send('Hello World');
